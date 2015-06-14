@@ -1,3 +1,7 @@
+title: sublime text 配置
+date: 2015-06-14 21:14:23
+tags:
+---
 #sublime text 2
 
 ***
