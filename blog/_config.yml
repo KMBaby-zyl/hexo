@@ -3,11 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: kmbaby的博客
 subtitle:
-description:
-author: John Doe
-language:
+description: 学习总结 思考感悟 知识管理
+author: kmbaby
+email: zhangyili911229@gmail.com
+language: zh-CN
 timezone:
 
 # URL
@@ -63,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
@@ -71,5 +72,4 @@ deploy:
   type: git
   repo: git@github.com:KMBaby-zyl/kmbaby-zyl.github.io.git
   branch: master
-  message: blog update
 
