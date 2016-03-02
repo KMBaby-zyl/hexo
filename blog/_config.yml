@@ -72,4 +72,3 @@ deploy:
   type: git
   repo: git@github.com:KMBaby-zyl/kmbaby-zyl.github.io.git
   branch: master
-
