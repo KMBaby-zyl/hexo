@@ -79,6 +79,11 @@ manifest.json是用来告诉项目的 webpack 相关模块对应lib.js。
             }),
 
 完成后先编译一次dll 再 执行 项目编译。dll文件编译一次后除非变更否则不需要再编译。
+页面中
+
+    <script src="./lib.js"></script> //先引入lib.js 或者 把两者合并
+    <script src="./common.js"></script>
+
 
 对项目中的 common.js dll前后 做了一次对比
 
@@ -86,6 +91,11 @@ dll前 186秒
 dll后 92秒
 
 ## 4、HappyPack
-专门写个篇章
+
+https://github.com/amireh/happypack
+
+loader文件多线程
+
+之后专门写个篇章
 
 
