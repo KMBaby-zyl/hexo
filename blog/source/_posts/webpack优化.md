@@ -1,4 +1,10 @@
-# webpack 优化
+title: webpack优化
+date: 2016-10-09
+tags: webpack
+---
+
+
+# webpack优化
 
 ## 0、调试
 webpack --config file --colors --profile --display-modules
