@@ -14,8 +14,8 @@ webpack入门中 列出了下面这些插件
         	WebpackNotifierPlugin...,
         	webpack.DllReferencePlugin...
         ],
-        
-        
+
+
 本篇则对它们做一个介绍
 
 插件分文webpack内置插件 和 要外部插件。
@@ -45,7 +45,7 @@ webpack入门中 列出了下面这些插件
 	            from :'global/lib/es5-shim-sham.js'
 	        }
 	])
-	
+
 from	定义要拷贝的源目录
 to	定义要拷盘的目标目录
 context 上下文
@@ -63,11 +63,11 @@ force	强制覆盖先前的插件	可选 默认false
 
 当模块使用这些变量的时候,wepback会自动加载 不用再去requre
 
-## webpack.NoErrorsPlugin 
+## webpack.NoErrorsPlugin
 
 不显示错误插件
 
-## webpack.optimize.DedupePlugin 
+## webpack.optimize.DedupePlugin
 
 查找相等或近似的模块，避免在最终生成的文件中出现重复的模块
 
@@ -76,18 +76,18 @@ force	强制覆盖先前的插件	可选 默认false
 ## webpack.optimize.CommonsChunkPlugin 提取公共代码的插件
 
 	new webpack.optimize.CommonsChunkPlugin('common.js')
-	
+
 当你的 webpack 构建任务中有多个入口文件，而这些文件都 require 了相同的模块，如果你不做任何事情，webpack 会为每个入口文件引入一份相同的模块，显然这样做，会使得相同模块变化时，所有引入的 entry 都需要一次 rebuild，造成了性能的浪费，CommonsChunkPlugin 可以将相同的模块提取出来单独打包，进而减小 rebuild 时的性能消耗。
 
 ## WebpackNotifierPlugin 编译完成后给一个Notifier提示
-	
+
 	new WebpackNotifierPlugin({
         title: 'Webpack 编译成功',
         contentImage: path.resolve(process.cwd(), './global/img/logo.png'),
         alwaysNotify: true
     }),
 
-## webpack.DllReferencePlugin   
+## webpack.DllReferencePlugin
 
 除了正在开发的源代码之外，通常还会引入很多第三方 NPM 包，这些包我们不会进行修改，但是仍然需要在每次 build 的过程中消耗构建性能，那有没有什么办法可以减少这些消耗呢？DLLPlugin 就是一个解决方案，他通过前置这些依赖包的构建，来提高真正的 build 和 rebuild 的构建效率。
 
@@ -170,26 +170,26 @@ force	强制覆盖先前的插件	可选 默认false
                 manifest: require('./lib/manifest.json')
             }),
         ]
-     
 
 
-## loader 
+
+## loader
 
 loader 本身是一个javascript模块 需要通过npm install 对应的loader
 
-如 
-	
-	babel-loader , 
-	css-loader, 
-	less-loader, 
-	sass-loader, 
-	file-loader, 
-	html-loader, 
-	url-loader, 
-	style-loader, 
+如
+
+	babel-loader ,
+	css-loader,
+	less-loader,
+	sass-loader,
+	file-loader,
+	html-loader,
+	url-loader,
+	style-loader,
 	json-loader
 
-## js 
+## js
 	{
         test: /\.js[x]?$/,
         exclude: /(node_modules)|(global\/lib\/)/,
@@ -222,8 +222,8 @@ ExtractTextPlugin的extract方法有两个参数，第一个参数是经过编�
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap&-convertValues!sass-loader?sourceMap')
     }
-    
-    
+
+
 css-loader!xxx-loader 表示先执行xxx-loader再css-loader
 
 .rcss中 加了一个 modules 参数 代表开启 css modules
