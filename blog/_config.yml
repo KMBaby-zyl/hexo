@@ -68,7 +68,13 @@ theme: next
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
+# deploy:
+#   type: git
+#   repo: root@114.55.238.41:/hemo/repo/blog.git
+#   branch: master
+
 deploy:
   type: git
-  repo: root@114.55.238.41:/home/repo/blog.git
+#  repo: root@114.55.238.41:/home/repo/blog.git
+  repo: git@github.com:KMBaby-zyl/kmbaby-zyl.github.io.git
   branch: master
